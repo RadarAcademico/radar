@@ -395,9 +395,17 @@ export default function CEFETMGEngCompPage() {
             {
               nome: "Física 2",
               sigla: "Física 2",
-              cargaHoraria: 90,
+              cargaHoraria: 60,
               requisitos: ["Física I", "Cálculo 2"],
               libera: ["Física 3"],
+              dificuldade: "hard",
+            },
+            {
+              nome: "Física Experimental 1",
+              sigla: "Física Exp 1",
+              cargaHoraria: 60,
+              requisitos: [],
+              libera: ["Física Exp 2"],
               dificuldade: "hard",
             },
             {
