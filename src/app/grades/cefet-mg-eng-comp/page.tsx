@@ -202,14 +202,6 @@ export default function CEFETMGEngCompPage() {
       {/* Grade Content Section */}
       <section className="grade-content-section">
         <div className="container">
-          {/* Grade Header */}
-          <div className="grade-header">
-            <h2>Grade Curricular</h2>
-            <p className="grade-description">
-              Confira todas as disciplinas organizadas por período
-            </p>
-          </div>
-
           {/* Periods Container with Horizontal Scroll */}
           <div className="periodos-wrapper">
             {/* Scroll Arrows */}
