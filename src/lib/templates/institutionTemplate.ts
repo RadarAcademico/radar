@@ -1,4 +1,4 @@
-import { Institution, Course, Grade, Subject } from "../../types";
+import { Institution, Course, Grade, Subject } from "../types";
 
 // ===== TEMPLATE PARA NOVAS INSTITUIÇÕES =====
 

@@ -6,6 +6,7 @@ import {
   Professor,
   FilterOptions,
 } from "../types";
+import { useState, useEffect } from "react";
 
 // ===== SERVIÇO DE DADOS ESCALÁVEL =====
 
@@ -139,8 +140,11 @@ class DataService {
 
   // ===== LÓGICA DE PRÉ-REQUISITOS =====
 
-  getAvailableSubjects(approvedSubjects: string[], gradeId: string): Subject[] {
-    const subjects = this.getSubjects(gradeId);
+  async getAvailableSubjects(
+    approvedSubjects: string[],
+    gradeId: string
+  ): Promise<Subject[]> {
+    const subjects = await this.getSubjects(gradeId);
 
     return subjects.filter((subject) => {
       // Se já foi aprovado, não está disponível
@@ -155,8 +159,11 @@ class DataService {
     });
   }
 
-  getBlockedSubjects(approvedSubjects: string[], gradeId: string): Subject[] {
-    const subjects = this.getSubjects(gradeId);
+  async getBlockedSubjects(
+    approvedSubjects: string[],
+    gradeId: string
+  ): Promise<Subject[]> {
+    const subjects = await this.getSubjects(gradeId);
 
     return subjects.filter((subject) => {
       // Se já foi aprovado, não está bloqueado
@@ -171,8 +178,11 @@ class DataService {
     });
   }
 
-  getUnlockedSubjects(approvedSubjects: string[], gradeId: string): string[] {
-    const subjects = this.getSubjects(gradeId);
+  async getUnlockedSubjects(
+    approvedSubjects: string[],
+    gradeId: string
+  ): Promise<string[]> {
+    const subjects = await this.getSubjects(gradeId);
     const unlocked: string[] = [];
 
     subjects.forEach((subject) => {
@@ -181,17 +191,27 @@ class DataService {
       }
     });
 
-    return [...new Set(unlocked)]; // Remove duplicatas
+    // Remove duplicatas sem usar Set
+    const uniqueUnlocked = unlocked.filter(
+      (item, index) => unlocked.indexOf(item) === index
+    );
+    return uniqueUnlocked;
   }
 
   // ===== ESTATÍSTICAS =====
 
-  getProgressStats(
+  async getProgressStats(
     approvedSubjects: string[],
     failedSubjects: string[],
     gradeId: string
-  ) {
-    const subjects = this.getSubjects(gradeId);
+  ): Promise<{
+    total: number;
+    approved: number;
+    failed: number;
+    progress: number;
+    remaining: number;
+  }> {
+    const subjects = await this.getSubjects(gradeId);
     const totalSubjects = subjects.length;
     const approvedCount = approvedSubjects.length;
     const failedCount = failedSubjects.length;
