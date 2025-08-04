@@ -1,0 +1,261 @@
+{
+  "id": "antiga",
+  "name": "Grade Antiga",
+  "year": "até 2022",
+  "courseId": "engenharia-computacao",
+  "isActive": false,
+  "periods": [
+    {
+      "number": 1,
+      "title": "1º Período",
+      "subjects": [
+        {
+          "id": "calculo-1",
+          "name": "Cálculo 1",
+          "acronym": "Cálculo 1",
+          "hours": 90,
+          "prerequisites": [],
+          "unlocks": ["calculo-2", "fisica-1"],
+          "difficulty": "hard",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 1
+        },
+        {
+          "id": "gaav",
+          "name": "Geometria Analítica e Álgebra Vetorial",
+          "acronym": "GAAV",
+          "hours": 90,
+          "prerequisites": [],
+          "unlocks": [],
+          "difficulty": "hard",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 1
+        },
+        {
+          "id": "discreta-antiga",
+          "name": "Matemática Discreta",
+          "acronym": "Discreta",
+          "hours": 60,
+          "prerequisites": [],
+          "unlocks": ["calculo-ii"],
+          "difficulty": "medium",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 1
+        },
+        {
+          "id": "pc",
+          "name": "Programação de Computadores I",
+          "acronym": "PC",
+          "hours": 60,
+          "prerequisites": [],
+          "unlocks": [],
+          "difficulty": "medium",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 1
+        },
+        {
+          "id": "lab-pc",
+          "name": "Laboratório de Programação de Computadores I",
+          "acronym": "Lab PC",
+          "hours": 60,
+          "prerequisites": [],
+          "unlocks": [],
+          "difficulty": "medium",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 1
+        },
+        {
+          "id": "iec",
+          "name": "Introdução à Engenharia de Computação",
+          "acronym": "IEC",
+          "hours": 30,
+          "prerequisites": [],
+          "unlocks": [],
+          "difficulty": "easy",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 1
+        },
+        {
+          "id": "portugues",
+          "name": "Português Instrumental",
+          "acronym": "Português",
+          "hours": 30,
+          "prerequisites": [],
+          "unlocks": [],
+          "difficulty": "easy",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 1
+        },
+        {
+          "id": "metodologia-antiga",
+          "name": "Metodologia Cientifica",
+          "acronym": "Metodologia",
+          "hours": 30,
+          "prerequisites": [],
+          "unlocks": [],
+          "difficulty": "medium",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 1
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "2º Período",
+      "subjects": [
+        {
+          "id": "calculo-2",
+          "name": "Cálculo 2",
+          "acronym": "Cálculo 2",
+          "hours": 60,
+          "prerequisites": ["calculo-1"],
+          "unlocks": ["calculo-3", "fisica-1"],
+          "difficulty": "hard",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 2
+        },
+        {
+          "id": "fisica-1",
+          "name": "Física I",
+          "acronym": "Física I",
+          "hours": 60,
+          "prerequisites": ["calculo-1"],
+          "unlocks": ["fisica-2"],
+          "difficulty": "hard",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 2
+        },
+        {
+          "id": "pc2",
+          "name": "Programação de Computadores 2",
+          "acronym": "PC2",
+          "hours": 60,
+          "prerequisites": ["pc2"],
+          "unlocks": ["estruturas-dados"],
+          "difficulty": "medium",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 2
+        },
+        {
+          "id": "lab-pc2",
+          "name": "Laboratório de Programação de Computadores 2",
+          "acronym": "Lab PC2",
+          "hours": 30,
+          "prerequisites": ["lab-pc2"],
+          "unlocks": ["estruturas-dados"],
+          "difficulty": "medium",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 2
+        },
+        {
+          "id": "poo-antiga",
+          "name": "Programação Orientada a Objetos",
+          "acronym": "POO",
+          "hours": 60,
+          "prerequisites": ["ldp"],
+          "unlocks": ["estruturas-dados"],
+          "difficulty": "medium",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 2
+        },
+        {
+          "id": "ingles-antiga",
+          "name": "Inglês Instrumental 1",
+          "acronym": "Inglês",
+          "hours": 30,
+          "prerequisites": [],
+          "unlocks": ["ingles-instrumental-2"],
+          "difficulty": "easy",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 2
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "3º Período",
+      "subjects": [
+        {
+          "id": "calculo-3",
+          "name": "Cálculo 3",
+          "acronym": "Cálculo 3",
+          "hours": 90,
+          "prerequisites": ["calculo-2"],
+          "unlocks": ["calculo-4"],
+          "difficulty": "hard",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 3
+        },
+        {
+          "id": "fisica-2",
+          "name": "Física 2",
+          "acronym": "Física 2",
+          "hours": 90,
+          "prerequisites": ["fisica-1", "calculo-2"],
+          "unlocks": ["fisica-3"],
+          "difficulty": "hard",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 3
+        },
+        {
+          "id": "estruturas-dados",
+          "name": "Estruturas de Dados",
+          "acronym": "ED",
+          "hours": 60,
+          "prerequisites": ["poo"],
+          "unlocks": ["algoritmos"],
+          "difficulty": "hard",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 3
+        },
+        {
+          "id": "mnc-antiga",
+          "name": "Métodos Numéricos Computacionais",
+          "acronym": "MNC",
+          "hours": 60,
+          "prerequisites": ["al"],
+          "unlocks": ["teoria-computacao"],
+          "difficulty": "medium",
+          "obrigatoria": true,
+          "courseId": "engenharia-computacao",
+          "gradeId": "antiga",
+          "periodNumber": 3
+        }
+      ]
+    }
+  ]
+}

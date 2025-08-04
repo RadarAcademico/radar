@@ -1,0 +1,26 @@
+{
+  "id": "engenharia-computacao",
+  "name": "Engenharia de Computação",
+  "acronym": "EC",
+  "institutionId": "cefet-mg",
+  "departmentId": "computacao",
+  "duration": 10,
+  "totalHours": 3600,
+  "description": "Curso de engenharia focado no desenvolvimento de sistemas computacionais, hardware e software. Forma profissionais capazes de projetar, implementar e gerenciar sistemas computacionais complexos.",
+  "grades": [
+    {
+      "id": "nova",
+      "name": "Grade Nova",
+      "year": "2023 em diante",
+      "courseId": "engenharia-computacao",
+      "isActive": true
+    },
+    {
+      "id": "antiga",
+      "name": "Grade Antiga",
+      "year": "até 2022",
+      "courseId": "engenharia-computacao",
+      "isActive": false
+    }
+  ]
+}

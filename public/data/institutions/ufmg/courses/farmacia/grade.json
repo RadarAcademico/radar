@@ -1,0 +1,105 @@
+{
+  "id": "grade",
+  "name": "Grade Ciência da Computação - UFES",
+  "year": "2024 em diante",
+  "courseId": "ciencia-computacao",
+  "isActive": true,
+  "periods": [
+    {
+      "number": 1,
+      "title": "1º Período",
+      "subjects": [
+        {
+          "id": "matematica-basica",
+          "name": "Matemática Básica",
+          "acronym": "MB",
+          "hours": 60
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "2º Período",
+      "subjects": [
+        {
+          "id": "matematica-basica",
+          "name": "Matemática Básica",
+          "acronym": "MB",
+          "hours": 60
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "3º Período",
+      "subjects": [
+        {
+          "id": "matematica-basica",
+          "name": "Matemática Básica",
+          "acronym": "MB",
+          "hours": 60
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "4º Período",
+      "subjects": [
+        {
+          "id": "matematica-basica",
+          "name": "Matemática Básica",
+          "acronym": "MB",
+          "hours": 60
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "5º Período",
+      "subjects": [
+        {
+          "id": "matematica-basica",
+          "name": "Matemática Básica",
+          "acronym": "MB",
+          "hours": 60
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "6º Período",
+      "subjects": [
+        {
+          "id": "matematica-basica",
+          "name": "Matemática Básica",
+          "acronym": "MB",
+          "hours": 60
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "7º Período",
+      "subjects": [
+        {
+          "id": "matematica-basica",
+          "name": "Matemática Básica",
+          "acronym": "MB",
+          "hours": 60
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "8º Período",
+      "subjects": [
+        {
+          "id": "matematica-basica",
+          "name": "Matemática Básica",
+          "acronym": "MB",
+          "hours": 60
+        }
+      ]
+    }
+  ]
+}

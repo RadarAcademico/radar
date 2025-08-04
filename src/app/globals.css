@@ -44,6 +44,212 @@ body {
   padding: 0 20px;
 }
 
+/* Responsive container adjustments for larger screens */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .container {
+    max-width: 2200px;
+  }
+}
+
+/* === HORIZONTAL SCROLL STYLES === */
+.periodos-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 -30px; /* Negative margin to allow arrows to extend beyond container */
+}
+
+.periodos-container {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding: 0 50px; /* Add padding to make room for arrows */
+}
+
+.periodos-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.periodos-grid {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 0.5rem;
+  min-width: max-content;
+  transition: transform 0.3s ease;
+}
+
+.periodo-column {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  flex: 0 0 320px;
+  min-width: 320px;
+  max-width: 320px;
+  height: fit-content;
+}
+
+/* Scroll Arrow Styles */
+.scroll-arrow {
+  position: fixed;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  border: none;
+  border-radius: 50%;
+  color: var(--light);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(242, 22, 40, 0.3);
+  z-index: 1000;
+}
+
+.scroll-arrow:hover {
+  opacity: 1 !important;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(242, 22, 40, 0.4);
+}
+
+.scroll-arrow.left {
+  left: 40px;
+}
+
+.scroll-arrow.right {
+  right: 40px;
+}
+
+.scroll-arrow.visible {
+  opacity: 0.8;
+}
+
+.scroll-arrow i {
+  transition: transform 0.2s ease;
+}
+
+.scroll-arrow:hover i {
+  transform: scale(1.2);
+}
+
+/* Gradient overlays for smooth fade effect */
+.scroll-gradient-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(to right, var(--dark) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-gradient-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(to left, var(--dark) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-gradient-left.visible,
+.scroll-gradient-right.visible {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .periodos-wrapper {
+    margin: 0 -10px;
+  }
+
+  .periodos-container {
+    padding: 0 50px;
+  }
+
+  .periodo-column {
+    flex: 0 0 280px;
+    min-width: 280px;
+    max-width: 280px;
+    padding: 1.25rem;
+  }
+
+  .scroll-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .scroll-arrow.left {
+    left: 20px;
+  }
+
+  .scroll-arrow.right {
+    right: 20px;
+  }
+}
+
+/* Large screen optimizations to show more periods */
+@media (min-width: 1200px) {
+  .periodo-column {
+    flex: 0 0 300px;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 1.75rem;
+  }
+
+  .periodos-grid {
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .periodo-column {
+    flex: 0 0 340px;
+    min-width: 340px;
+    max-width: 340px;
+    padding: 2rem;
+  }
+
+  .periodos-grid {
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+  }
+}
+
 /* === HEADER === */
 .header {
   position: fixed;

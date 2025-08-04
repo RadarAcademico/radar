@@ -1,0 +1,48 @@
+{
+  "id": "cefet-mg",
+  "name": "Centro Federal de Educação Tecnológica de Minas Gerais",
+  "acronym": "CEFET-MG",
+  "city": "Belo Horizonte",
+  "state": "MG",
+  "region": "Sudeste",
+  "website": "https://www.cefetmg.br",
+  "logo": "/assets/institutions/cefet-mg-logo.png",
+  "description": "Instituição federal de ensino superior localizada em Belo Horizonte, MG, com foco em educação tecnológica e engenharias.",
+  "departments": [
+    {
+      "id": "computacao",
+      "name": "Departamento de Computação",
+      "acronym": "DECOM",
+      "institutionId": "cefet-mg",
+      "description": "Departamento responsável pelos cursos de computação e tecnologia da informação."
+    },
+    {
+      "id": "matematica",
+      "name": "Departamento de Matemática",
+      "acronym": "DEMAT",
+      "institutionId": "cefet-mg",
+      "description": "Departamento responsável pelas disciplinas de matemática e cálculo."
+    },
+    {
+      "id": "fisica",
+      "name": "Departamento de Física",
+      "acronym": "DEFIS",
+      "institutionId": "cefet-mg",
+      "description": "Departamento responsável pelas disciplinas de física e laboratórios."
+    },
+    {
+      "id": "mecanica",
+      "name": "Departamento de Engenharia Mecânica",
+      "acronym": "DEMEC",
+      "institutionId": "cefet-mg",
+      "description": "Departamento responsável pelos cursos de engenharia mecânica."
+    },
+    {
+      "id": "administracao",
+      "name": "Departamento de Administração",
+      "acronym": "DEADM",
+      "institutionId": "cefet-mg",
+      "description": "Departamento responsável pelos cursos de administração e gestão."
+    }
+  ]
+}
