@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { AuthProvider } from "@/contexts/AuthContext";
 import "./globals.css";
 
 export const metadata = {
@@ -31,9 +32,11 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <AuthProvider>
+          <Header />
+          {children}
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

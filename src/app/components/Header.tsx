@@ -74,7 +74,9 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <button className="btn-login">Entrar</button>
+            <Link href="/auth" className="btn-login">
+              Entrar
+            </Link>
           </li>
         </ul>
         <div

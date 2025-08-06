@@ -43,7 +43,7 @@ export default function CEFETMGEngCompPage() {
           "engenharia-computacao"
         );
         console.log("Grades disponíveis:", grades);
-        setAvailableGrades(grades.map((g) => g.id));
+        setAvailableGrades(grades.map(g => g.id));
       } catch (error) {
         console.error("Erro ao carregar grades disponíveis:", error);
       }
@@ -171,7 +171,7 @@ export default function CEFETMGEngCompPage() {
           <div className="grade-selector">
             <h2>Selecione a Grade Curricular</h2>
             <div className="grade-options">
-              {availableGrades.map((gradeId) => (
+              {availableGrades.map(gradeId => (
                 <button
                   key={gradeId}
                   onClick={() => setSelectedGrade(gradeId)}
@@ -239,7 +239,7 @@ export default function CEFETMGEngCompPage() {
             <div className="periodos-container" ref={scrollContainerRef}>
               {/* Periods Grid */}
               <div className="periodos-grid">
-                {grade.periods.map((period) => (
+                {grade.periods.map(period => (
                   <div key={period.number} className="periodo-column">
                     <div className="periodo-header">
                       <h3>{period.title}</h3>
@@ -250,7 +250,7 @@ export default function CEFETMGEngCompPage() {
 
                     <div className="disciplinas-list">
                       {period.subjects.length > 0 ? (
-                        period.subjects.map((subject) => (
+                        period.subjects.map(subject => (
                           <div key={subject.id} className="disciplina-card">
                             <div className="disciplina-header">
                               <h4>{subject.name}</h4>

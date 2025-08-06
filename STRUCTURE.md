@@ -175,8 +175,8 @@ interface Subject {
 }
 
 // Exemplo de uso
-const obrigatorias = subjects.filter((s) => s.obrigatoria);
-const optativas = subjects.filter((s) => !s.obrigatoria);
+const obrigatorias = subjects.filter(s => s.obrigatoria);
+const optativas = subjects.filter(s => !s.obrigatoria);
 ```
 
 ### 2. **Lógica de Pré-requisitos**

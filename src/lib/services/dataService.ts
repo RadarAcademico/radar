@@ -90,7 +90,7 @@ class DataService {
 
     if (!filters) return institutions;
 
-    return institutions.filter((institution) => {
+    return institutions.filter(institution => {
       if (filters.region && institution.region !== filters.region) return false;
       return true;
     });
@@ -98,12 +98,12 @@ class DataService {
 
   async getCourses(institutionId: string): Promise<Course[]> {
     const courses = Array.from(this.courses.values());
-    return courses.filter((course) => course.institutionId === institutionId);
+    return courses.filter(course => course.institutionId === institutionId);
   }
 
   async getGrades(courseId: string): Promise<Grade[]> {
     const grades = Array.from(this.grades.values());
-    return grades.filter((grade) => grade.courseId === courseId);
+    return grades.filter(grade => grade.courseId === courseId);
   }
 
   async getAvailableGrades(
@@ -135,7 +135,7 @@ class DataService {
 
   async getSubjects(gradeId: string): Promise<Subject[]> {
     const subjects = Array.from(this.subjects.values());
-    return subjects.filter((subject) => subject.gradeId === gradeId);
+    return subjects.filter(subject => subject.gradeId === gradeId);
   }
 
   // ===== LÓGICA DE PRÉ-REQUISITOS =====
@@ -146,12 +146,12 @@ class DataService {
   ): Promise<Subject[]> {
     const subjects = await this.getSubjects(gradeId);
 
-    return subjects.filter((subject) => {
+    return subjects.filter(subject => {
       // Se já foi aprovado, não está disponível
       if (approvedSubjects.includes(subject.id)) return false;
 
       // Verificar se todos os pré-requisitos foram aprovados
-      const hasAllPrerequisites = subject.prerequisites.every((prereqId) =>
+      const hasAllPrerequisites = subject.prerequisites.every(prereqId =>
         approvedSubjects.includes(prereqId)
       );
 
@@ -165,13 +165,13 @@ class DataService {
   ): Promise<Subject[]> {
     const subjects = await this.getSubjects(gradeId);
 
-    return subjects.filter((subject) => {
+    return subjects.filter(subject => {
       // Se já foi aprovado, não está bloqueado
       if (approvedSubjects.includes(subject.id)) return false;
 
       // Verificar se algum pré-requisito não foi aprovado
       const hasMissingPrerequisites = subject.prerequisites.some(
-        (prereqId) => !approvedSubjects.includes(prereqId)
+        prereqId => !approvedSubjects.includes(prereqId)
       );
 
       return hasMissingPrerequisites;
@@ -185,7 +185,7 @@ class DataService {
     const subjects = await this.getSubjects(gradeId);
     const unlocked: string[] = [];
 
-    subjects.forEach((subject) => {
+    subjects.forEach(subject => {
       if (approvedSubjects.includes(subject.id)) {
         unlocked.push(...subject.unlocks);
       }

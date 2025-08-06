@@ -38,7 +38,7 @@ export default function Home() {
     setSearchTerm(searchTerm);
 
     const disciplinaCards = document.querySelectorAll(".disciplina-card");
-    disciplinaCards.forEach((card) => {
+    disciplinaCards.forEach(card => {
       const h3Element = card.querySelector("h3");
       if (h3Element && h3Element.textContent) {
         const disciplinaName = h3Element.textContent.toLowerCase();
@@ -61,8 +61,8 @@ export default function Home() {
       rootMargin: "0px",
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           if (entry.target.id === "students-count") {
             animateNumber(studentsCountRef, 1247);

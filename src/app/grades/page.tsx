@@ -669,9 +669,7 @@ export default function GradesPage() {
 
   // Obter opções dinâmicas baseadas nos filtros selecionados
   const getRegioes = () => {
-    const regioes = Array.from(
-      new Set(gradesData.map((grade) => grade.regiao))
-    );
+    const regioes = Array.from(new Set(gradesData.map(grade => grade.regiao)));
     return ["Todas", ...regioes];
   };
 
@@ -679,11 +677,11 @@ export default function GradesPage() {
     let filtered = gradesData;
 
     if (selectedRegiao && selectedRegiao !== "Todas") {
-      filtered = filtered.filter((grade) => grade.regiao === selectedRegiao);
+      filtered = filtered.filter(grade => grade.regiao === selectedRegiao);
     }
 
     const instituicoes = Array.from(
-      new Set(filtered.map((grade) => grade.instituicao))
+      new Set(filtered.map(grade => grade.instituicao))
     );
     return ["Todas", ...instituicoes];
   };
@@ -692,16 +690,16 @@ export default function GradesPage() {
     let filtered = gradesData;
 
     if (selectedRegiao && selectedRegiao !== "Todas") {
-      filtered = filtered.filter((grade) => grade.regiao === selectedRegiao);
+      filtered = filtered.filter(grade => grade.regiao === selectedRegiao);
     }
 
     if (selectedInstituicao && selectedInstituicao !== "Todas") {
       filtered = filtered.filter(
-        (grade) => grade.instituicao === selectedInstituicao
+        grade => grade.instituicao === selectedInstituicao
       );
     }
 
-    const cursos = Array.from(new Set(filtered.map((grade) => grade.curso)));
+    const cursos = Array.from(new Set(filtered.map(grade => grade.curso)));
     return ["Todos", ...cursos];
   };
 
@@ -710,17 +708,17 @@ export default function GradesPage() {
     let filtered = gradesData;
 
     if (selectedRegiao && selectedRegiao !== "Todas") {
-      filtered = filtered.filter((grade) => grade.regiao === selectedRegiao);
+      filtered = filtered.filter(grade => grade.regiao === selectedRegiao);
     }
 
     if (selectedInstituicao && selectedInstituicao !== "Todas") {
       filtered = filtered.filter(
-        (grade) => grade.instituicao === selectedInstituicao
+        grade => grade.instituicao === selectedInstituicao
       );
     }
 
     if (selectedCurso && selectedCurso !== "Todos") {
-      filtered = filtered.filter((grade) => grade.curso === selectedCurso);
+      filtered = filtered.filter(grade => grade.curso === selectedCurso);
     }
 
     setFilteredGrades(filtered);
@@ -816,10 +814,10 @@ export default function GradesPage() {
                 <label>Região</label>
                 <select
                   value={selectedRegiao}
-                  onChange={(e) => setSelectedRegiao(e.target.value)}
+                  onChange={e => setSelectedRegiao(e.target.value)}
                   className="filtro-select"
                 >
-                  {getRegioes().map((regiao) => (
+                  {getRegioes().map(regiao => (
                     <option key={regiao} value={regiao}>
                       {regiao}
                     </option>
@@ -831,11 +829,11 @@ export default function GradesPage() {
                 <label>Instituição</label>
                 <select
                   value={selectedInstituicao}
-                  onChange={(e) => setSelectedInstituicao(e.target.value)}
+                  onChange={e => setSelectedInstituicao(e.target.value)}
                   className="filtro-select"
                   disabled={!selectedRegiao || selectedRegiao === "Todas"}
                 >
-                  {getInstituicoes().map((instituicao) => (
+                  {getInstituicoes().map(instituicao => (
                     <option key={instituicao} value={instituicao}>
                       {instituicao}
                     </option>
@@ -847,13 +845,13 @@ export default function GradesPage() {
                 <label>Curso</label>
                 <select
                   value={selectedCurso}
-                  onChange={(e) => setSelectedCurso(e.target.value)}
+                  onChange={e => setSelectedCurso(e.target.value)}
                   className="filtro-select"
                   disabled={
                     !selectedInstituicao || selectedInstituicao === "Todas"
                   }
                 >
-                  {getCursos().map((curso) => (
+                  {getCursos().map(curso => (
                     <option key={curso} value={curso}>
                       {curso}
                     </option>
@@ -888,7 +886,7 @@ export default function GradesPage() {
             </div>
           ) : (
             <div className="grades-grid">
-              {filteredGrades.map((grade) => (
+              {filteredGrades.map(grade => (
                 <div key={grade.id} className="grade-card">
                   <div className="grade-header">
                     <div className="grade-info">

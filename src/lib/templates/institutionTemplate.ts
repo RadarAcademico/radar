@@ -170,7 +170,7 @@ export const createInstitutionStructure = (
   );
 
   // Adicionar departamentos
-  institution.departments = departments.map((dept) =>
+  institution.departments = departments.map(dept =>
     createDepartmentTemplate(
       dept.id,
       dept.name,
@@ -182,7 +182,7 @@ export const createInstitutionStructure = (
 
   return {
     institution,
-    courses: courses.map((course) => {
+    courses: courses.map(course => {
       const courseTemplate = createCourseTemplate(
         course.id,
         course.name,
@@ -195,7 +195,7 @@ export const createInstitutionStructure = (
       );
 
       // Adicionar grades
-      courseTemplate.grades = course.grades.map((grade) => {
+      courseTemplate.grades = course.grades.map(grade => {
         const gradeTemplate = createGradeTemplate(
           grade.id,
           grade.name,
@@ -205,10 +205,10 @@ export const createInstitutionStructure = (
         );
 
         // Adicionar períodos e disciplinas
-        gradeTemplate.periods = grade.periods.map((period) => ({
+        gradeTemplate.periods = grade.periods.map(period => ({
           number: period.number,
           title: period.title,
-          subjects: period.subjects.map((subject) =>
+          subjects: period.subjects.map(subject =>
             createSubjectTemplate(
               subject.id,
               subject.name,
